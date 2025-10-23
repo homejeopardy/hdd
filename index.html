@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Holly Doremus | Environmental Law & Policy</title>
+    <style>
+        /* INLINE CSS from style.css for simplicity and fewer files */
+
+        /* Basic Reset */
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        /* Base Styles */
+        body {
+            font-family: 'Georgia', serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: #f4f4f9;
+        }
+
+        .container {
+            width: 90%;
+            max-width: 960px;
+            margin: auto;
+            overflow: hidden;
+        }
+
+        /* Header & Navigation */
+        header {
+            background: #004d40; /* Dark Teal */
+            color: white;
+            padding: 1em 0;
+            border-bottom: 5px solid #00796b;
+        }
+
+        header h1 {
+            float: left;
+            font-size: 1.8em;
+        }
+
+        nav ul {
+            float: right;
+            list-style: none;
+            margin-top: 5px;
+        }
+
+        nav ul li {
+            display: inline;
+            padding: 0 15px 0 15px;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            text-transform: uppercase;
+            font-weight: bold;
+            font-size: 0.9em;
+        }
+
+        nav a:hover {
+            color: #c8e6c9; /* Light Green */
+        }
+        
+        /* Clearfix for header */
+        header .container::after {
+            content: "";
+            display: table;
+            clear: both;
+        }
+
+        /* Main Content Sections */
+        main {
+            padding: 20px 0;
+        }
+
+        section {
+            padding: 20px 0;
+        }
+
+        h2 {
+            color: #004d40;
+            border-bottom: 2px solid #e0e0e0;
+            padding-bottom: 10px;
+            margin-bottom: 20px;
+        }
+
+        /* About Section Specifics */
+        .about-content {
+            display: flex;
+            gap: 20px;
+            align-items: flex-start;
+        }
+
+        .profile-photo {
+            flex-shrink: 0;
+            width: 200px;
+            height: 200px; /* Placeholder size */
+            background-color: #ddd;
+            border: 3px solid #00796b;
+            border-radius: 5px;
+            text-align: center;
+            line-height: 200px;
+            overflow: hidden;
+        }
+
+        .profile-photo img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+        
+        .bio {
+            flex-grow: 1;
+        }
+
+        /* Publications */
+        #publications ul {
+            list-style-type: disc;
+            padding-left: 20px;
+        }
+
+        #publications li {
+            margin-bottom: 15px;
+        }
+
+        .open-access-link {
+            color: #d32f2f; /* Red for emphasis on availability */
+            font-weight: bold;
+        }
+
+        /* External Links */
+        .external-links li {
+            margin-bottom: 10px;
+            list-style: none;
+        }
+
+        .external-links a {
+            display: inline-block;
+            background: #00796b;
+            color: white;
+            padding: 5px 10px;
+            text-decoration: none;
+            border-radius: 3px;
+            margin-left: 15px;
+        }
+
+        .download-link {
+            margin: 20px 0;
+        }
+
+        .download-link a {
+            background: #d32f2f;
+            color: white;
+            padding: 10px 15px;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: bold;
+        }
+        
+        .download-link a:hover {
+            background: #a12323;
+        }
+
+        /* Footer */
+        footer {
+            background: #333;
+            color: white;
+            text-align: center;
+            padding: 10px 0;
+            margin-top: 30px;
+            font-size: 0.8em;
+        }
+        
+        /* Responsive adjustments */
+        @media (max-width: 600px) {
+            .about-content {
+                flex-direction: column;
+                align-items: center;
+            }
+            .profile-photo {
+                margin-bottom: 15px;
+            }
+            header h1, nav {
+                float: none;
+                text-align: center;
+            }
+            nav ul {
+                float: none;
+                padding-top: 10px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>Holly Doremus</h1>
+            <nav>
+                <ul>
+                    <li><a href="#photo-about">About</a></li>
+                    <li><a href="#cv">CV</a></li>
+                    <li><a href="#publications">Publications</a></li>
+                    <li><a href="#links">Links</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container">
+        
+        <section id="photo-about">
+            <h2>About Holly Doremus</h2>
+            <div class="about-content">
+                <div class="profile-photo">
+                    <p>[Image Placeholder]</p> 
+                    </div>
+                <div class="bio">
+                    <p>
+                        [**ACTION REQUIRED: Enter your professional biography here.**]
+                        Brief professional bio goes here. Focus on expertise in **environmental law, natural resources, and science policy**. Mention her primary academic institution and areas of research. 
+                    </p>
+                    <p>
+                        A second paragraph can elaborate on specific topics like the **Endangered Species Act**, **water law**, or the **role of science in legal decision-making**.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <hr>
+
+        <section id="cv">
+            <h2>Curriculum Vitae (CV)</h2>
+            <p>
+                Download the latest version of the CV below:
+            </p>
+            <p class="download-link">
+                <a href="holly_doremus_cv.pdf" download>Download CV (PDF)</a>
+            </p>
+        </section>
+
+        <hr>
+
+        <section id="publications">
+            <h2>Selected Publications</h2>
+            <p>
+                A list of key books, law review articles, and reports. Be sure to include direct links for open-access material (e.g., NRC reports).
+            </p>
+            <ul>
+                <li>
+                    <strong>"Title of Publication 1"</strong> (Year). Journal/Publisher Name. 
+                    <a href="[URL_TO_OPEN_ACCESS_PDF]" target="_blank" class="open-access-link">(Open Access PDF)</a>
+                </li>
+                <li>
+                    <strong>"Title of Publication 2: NRC Report Example"</strong> (Year). 
+                    <a href="[URL_TO_NRC_REPORT]" target="_blank">National Research Council Report Link</a>
+                </li>
+                <li>
+                    <strong>"Title of Publication 3"</strong> (Year). Journal/Publisher Name.
+                </li>
+            </ul>
+            <p>
+                [Link to full list of publications if one exists elsewhere.]
+            </p>
+        </section>
+
+        <hr>
+
+        <section id="links">
+            <h2>Connect & Read More</h2>
+            <ul class="external-links">
+                <li>
+                    🏛️ **Legal Planet:** Read my posts and collaborations on environmental law and policy.
+                    <a href="[URL_TO_LEGAL_PLANET_PROFILE]" target="_blank">Visit Legal Planet</a>
+                </li>
+                <li>
+                    🐦‍⬛ **BlueSky:** Follow my professional updates and commentary.
+                    <a href="[URL_TO_BLUESKY_PROFILE]" target="_blank">Connect on BlueSky</a>
+                </li>
+            </ul>
+        </section>
+
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 Holly Doremus. Last updated: October 2025.</p>
+        </div>
+    </footer>
+</body>
+</html>
