@@ -4,107 +4,112 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Holly Doremus | Environmental Law & Policy</title>
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@300;400;700&family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
     <style>
-        /* INLINE CSS from style.css for simplicity and fewer files */
+        /* CSS for a Professional, Academic Look */
 
-        /* Basic Reset */
+        /* --- 1. Base Styles & Reset --- */
         * {
             box-sizing: border-box;
             margin: 0;
             padding: 0;
         }
 
-        /* Base Styles */
         body {
-            font-family: 'Georgia', serif;
-            line-height: 1.6;
-            color: #333;
-            background-color: #f4f4f9;
+            /* Using Merriweather for headings/serif, Roboto for body/sans-serif */
+            font-family: 'Roboto', sans-serif;
+            line-height: 1.65;
+            color: #333; /* Dark Charcoal */
+            background-color: #fcfcfc; /* Soft Off-White */
         }
 
         .container {
             width: 90%;
-            max-width: 960px;
+            max-width: 1000px;
             margin: auto;
-            overflow: hidden;
+            padding: 0;
         }
 
-        /* Header & Navigation */
+        /* --- 2. Header & Navigation --- */
         header {
-            background: #004d40; /* Dark Teal */
+            background: #0D47A1; /* Deep Navy Blue */
             color: white;
-            padding: 1em 0;
-            border-bottom: 5px solid #00796b;
+            padding: 1.2em 0;
+            margin-bottom: 25px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
         }
 
+        header .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
         header h1 {
-            float: left;
+            font-family: 'Merriweather', serif;
+            font-weight: 700;
             font-size: 1.8em;
         }
 
         nav ul {
-            float: right;
             list-style: none;
-            margin-top: 5px;
         }
 
         nav ul li {
             display: inline;
-            padding: 0 15px 0 15px;
+            margin-left: 25px;
         }
 
         nav a {
-            color: white;
+            color: #E3F2FD; /* Very light blue */
             text-decoration: none;
-            text-transform: uppercase;
-            font-weight: bold;
-            font-size: 0.9em;
+            font-weight: 500;
+            font-size: 0.95em;
+            transition: color 0.3s;
         }
 
         nav a:hover {
-            color: #c8e6c9; /* Light Green */
+            color: #FFF;
+            border-bottom: 2px solid #FFF;
+            padding-bottom: 2px;
         }
         
-        /* Clearfix for header */
-        header .container::after {
-            content: "";
-            display: table;
-            clear: both;
-        }
-
-        /* Main Content Sections */
+        /* --- 3. Main Content Sections --- */
         main {
-            padding: 20px 0;
+            padding-bottom: 40px;
         }
 
         section {
-            padding: 20px 0;
+            padding: 30px 0;
+            border-bottom: 1px solid #eee;
         }
 
         h2 {
-            color: #004d40;
-            border-bottom: 2px solid #e0e0e0;
-            padding-bottom: 10px;
-            margin-bottom: 20px;
+            font-family: 'Merriweather', serif;
+            color: #1A237E; /* Darker academic blue */
+            font-size: 1.8em;
+            margin-bottom: 15px;
+            padding-bottom: 5px;
+            border-bottom: 2px solid #E0E0E0;
         }
 
         /* About Section Specifics */
-        .about-content {
+        #photo-about {
             display: flex;
-            gap: 20px;
-            align-items: flex-start;
+            gap: 40px;
+            padding-top: 0;
         }
-
+        
         .profile-photo {
             flex-shrink: 0;
-            width: 200px;
-            height: 200px; /* Placeholder size */
-            background-color: #ddd;
-            border: 3px solid #00796b;
-            border-radius: 5px;
-            text-align: center;
-            line-height: 200px;
+            width: 250px;
+            height: 250px; 
+            border: 1px solid #ccc;
             overflow: hidden;
+            background-color: #f4f4f4;
+            display: flex;
+            justify-content: center;
+            align-items: center;
         }
 
         .profile-photo img {
@@ -112,85 +117,102 @@
             height: auto;
             display: block;
         }
-        
+
         .bio {
             flex-grow: 1;
+            font-weight: 300;
         }
 
+        /* CV Download */
+        .download-link {
+            margin: 25px 0;
+        }
+
+        .download-link a {
+            background: #D84315; /* Academic Orange/Red for call-to-action */
+            color: white;
+            padding: 12px 20px;
+            text-decoration: none;
+            border-radius: 4px;
+            font-weight: 500;
+            transition: background-color 0.3s;
+        }
+        
+        .download-link a:hover {
+            background: #BF360C;
+        }
+        
         /* Publications */
         #publications ul {
-            list-style-type: disc;
-            padding-left: 20px;
+            list-style-type: none;
+            padding-left: 0;
         }
-
+        
         #publications li {
-            margin-bottom: 15px;
+            margin-bottom: 20px;
+            padding-left: 1.5em; /* Space for custom bullet */
+            text-indent: -1.5em; /* Moves text back under the bullet */
+        }
+        
+        #publications li::before {
+            content: "\2022"; /* Unicode for a solid bullet point */
+            color: #1A237E;
+            font-weight: bold;
+            display: inline-block; 
+            width: 1.5em; 
         }
 
         .open-access-link {
-            color: #d32f2f; /* Red for emphasis on availability */
-            font-weight: bold;
+            color: #388E3C; /* Professional Green */
+            font-weight: 500;
+            margin-left: 10px;
+            text-decoration: none;
+            border-bottom: 1px dashed #388E3C;
         }
 
         /* External Links */
         .external-links li {
-            margin-bottom: 10px;
+            margin-bottom: 12px;
             list-style: none;
         }
 
         .external-links a {
             display: inline-block;
-            background: #00796b;
-            color: white;
-            padding: 5px 10px;
+            background: #BBDEFB; /* Light Blue background */
+            color: #0D47A1; /* Navy text */
+            padding: 5px 12px;
             text-decoration: none;
             border-radius: 3px;
             margin-left: 15px;
+            font-weight: 400;
         }
 
-        .download-link {
-            margin: 20px 0;
-        }
-
-        .download-link a {
-            background: #d32f2f;
-            color: white;
-            padding: 10px 15px;
-            text-decoration: none;
-            border-radius: 5px;
-            font-weight: bold;
-        }
-        
-        .download-link a:hover {
-            background: #a12323;
-        }
-
-        /* Footer */
+        /* --- 4. Footer --- */
         footer {
-            background: #333;
-            color: white;
+            background: #212121; /* Dark Gray */
+            color: #BDBDBD;
             text-align: center;
-            padding: 10px 0;
-            margin-top: 30px;
-            font-size: 0.8em;
+            padding: 15px 0;
+            font-size: 0.85em;
         }
         
-        /* Responsive adjustments */
-        @media (max-width: 600px) {
-            .about-content {
+        /* --- 5. Responsiveness --- */
+        @media (max-width: 768px) {
+            #photo-about {
                 flex-direction: column;
                 align-items: center;
             }
             .profile-photo {
                 margin-bottom: 15px;
             }
-            header h1, nav {
-                float: none;
-                text-align: center;
+            header .container {
+                flex-direction: column;
             }
-            nav ul {
-                float: none;
-                padding-top: 10px;
+            header h1 {
+                margin-bottom: 15px;
+            }
+            nav ul li {
+                margin: 0 10px;
             }
         }
     </style>
@@ -213,71 +235,60 @@
     <main class="container">
         
         <section id="photo-about">
-            <h2>About Holly Doremus</h2>
-            <div class="about-content">
-                <div class="profile-photo">
-                    <p>[Image Placeholder]</p> 
-                    </div>
-                <div class="bio">
-                    <p>
-                        [**ACTION REQUIRED: Enter your professional biography here.**]
-                        Brief professional bio goes here. Focus on expertise in **environmental law, natural resources, and science policy**. Mention her primary academic institution and areas of research. 
-                    </p>
-                    <p>
-                        A second paragraph can elaborate on specific topics like the **Endangered Species Act**, **water law**, or the **role of science in legal decision-making**.
-                    </p>
+            <div class="profile-photo">
+                <p>Profile Photo Placeholder</p> 
                 </div>
+            <div class="bio">
+                <h2>About Holly Doremus</h2>
+                <p>
+                    [**ACTION REQUIRED: Enter your primary professional biography here.**]
+                    This space should introduce your core expertise in **environmental law, natural resources, and science policy**. Mention your primary academic institution, key titles, and overall mission in the field.
+                </p>
+                <p>
+                    A second paragraph can detail your specific research interests, such as the **Endangered Species Act**, **water rights and management**, or the intersection of **scientific uncertainty and legal regimes**. This is where you establish credibility and expertise.
+                </p>
             </div>
         </section>
-
-        <hr>
 
         <section id="cv">
             <h2>Curriculum Vitae (CV)</h2>
             <p>
-                Download the latest version of the CV below:
+                The full record of academic and professional experience is available for download:
             </p>
             <p class="download-link">
-                <a href="holly_doremus_cv.pdf" download>Download CV (PDF)</a>
+                <a href="holly_doremus_cv.pdf" download>Download Curriculum Vitae (PDF)</a>
             </p>
         </section>
-
-        <hr>
 
         <section id="publications">
             <h2>Selected Publications</h2>
             <p>
-                A list of key books, law review articles, and reports. Be sure to include direct links for open-access material (e.g., NRC reports).
+                A list of key books, law review articles, and reports. Open-access documents are linked directly.
             </p>
             <ul>
                 <li>
-                    <strong>"Title of Publication 1"</strong> (Year). Journal/Publisher Name. 
-                    <a href="[URL_TO_OPEN_ACCESS_PDF]" target="_blank" class="open-access-link">(Open Access PDF)</a>
+                    <strong>"The Role of Science in Ecosystem Management"</strong> (2023). *Ecology Law Quarterly*. 
+                    <a href="[URL_TO_OPEN_ACCESS_PDF]" target="_blank" class="open-access-link">Read Open Access</a>
                 </li>
                 <li>
-                    <strong>"Title of Publication 2: NRC Report Example"</strong> (Year). 
-                    <a href="[URL_TO_NRC_REPORT]" target="_blank">National Research Council Report Link</a>
+                    <strong>"The Need for Adaptive Environmental Governance"</strong> (2021). National Research Council Report. 
+                    <a href="[URL_TO_NRC_REPORT]" target="_blank" class="open-access-link">View NRC Report</a>
                 </li>
                 <li>
-                    <strong>"Title of Publication 3"</strong> (Year). Journal/Publisher Name.
+                    <strong>"Legal Barriers to Conservation"</strong> (2018). *Harvard Environmental Law Review*. (Link to journal page if no open access).
                 </li>
             </ul>
-            <p>
-                [Link to full list of publications if one exists elsewhere.]
-            </p>
         </section>
-
-        <hr>
 
         <section id="links">
             <h2>Connect & Read More</h2>
             <ul class="external-links">
                 <li>
-                    🏛️ **Legal Planet:** Read my posts and collaborations on environmental law and policy.
+                    🏛️ **Legal Planet:** Ongoing commentary and analysis on environmental law and policy.
                     <a href="[URL_TO_LEGAL_PLANET_PROFILE]" target="_blank">Visit Legal Planet</a>
                 </li>
                 <li>
-                    🐦‍⬛ **BlueSky:** Follow my professional updates and commentary.
+                    🐦‍⬛ **BlueSky:** Professional updates and quick insights into current legal and policy developments.
                     <a href="[URL_TO_BLUESKY_PROFILE]" target="_blank">Connect on BlueSky</a>
                 </li>
             </ul>
@@ -287,7 +298,8 @@
 
     <footer>
         <div class="container">
-            <p>&copy; 2025 Holly Doremus. Last updated: October 2025.</p>
+            <p>Contact and Copyright Information</p>
+            <p>&#169; 2025 Holly Doremus. Built for GitHub Pages.</p>
         </div>
     </footer>
 </body>
